@@ -1,0 +1,19 @@
+version: '3'
+services:
+  backend:
+    image: roman2447/site-diplom1-backend:latest
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
+    # Add any additional configuration for backend service here
+
+  frontend:
+    image: roman2447/site-diplom1-frontend:latest
+    ports:
+      - "3000:3000"
+    # Add any additional configuration for frontend service here
+
+  database:
+    image: roman2447/site-diplom1-database:latest
+    # Add any additional configuration for database service here
